@@ -200,4 +200,181 @@ values
 (33627967,'2022-03-22',	'Buenos aires',	1,70977),
 (33627981,'2022-03-26',	'Salta',3,61534);
 
+USE deliveryapp;
 
+explain cities;
+
+select * from cities
+;
+
+INSERT INTO cities
+(Ciudad,City_ID)
+values
+('Cipolletti',3),
+('Buenos aires',1),
+('Bahia blanca',2),
+('Mar del plata',4),
+('Mendoza',5),
+('San juan',7),
+('Salta',6);
+
+USE deliveryapp;
+
+explain locales;
+
+select * from locales;
+
+INSERT INTO locales
+(Order_ID,Local_ID)
+values
+(527825529,184984),
+(527825511,183903),
+(527822409,222554),
+(527821538,184949),
+(527823863,146354),
+(527828231,185130),
+(527826882,143960),
+(527828526,164551),
+(527822846,110301),
+(527823900,182582),
+(527822641,226724),
+(527824077,148395),
+(527827362,162858),
+(527826897,152824),
+(527825595,221642),
+(527822829,225721),
+(527824865,153692),
+(527826027,71905),
+(527825797,169885),
+(527823707,134241),
+(527821897,139582),
+(527823397,138642),
+(527826645,108183),
+(527828323,152621),
+(527825570,142995),
+(527823717,139191),
+(527827914,116366),
+(527827899,146952),
+(527824847,167803),
+(524845173,138493);
+
+USE deliveryapp;
+
+explain violations;
+
+select * from violations;
+
+INSERT INTO violations
+(violation_id,nombre)
+values
+
+(50481373,'No hay movimiento'),
+(50441082,'Critica negativa'),
+(50469973,'Salteo de pasos'),
+(50476727,'No GPS'),
+(50458946,'No hay movimiento al cliente'),
+(50460568,'No hay movimiento al cliente 20 min'),
+(50463476,'No hay movimiento al cliente 30 min'),
+(50465180,'Limite de caja'),
+(50489068,'Pedido no llego'),
+(50466704,'Bloqueo limite de caja'),
+(50474426,'Orden cancelada'),
+(50479789,'Pedido no llego 20 min'),
+(50486181,'No hay movimiento al local'),
+(50489842,'Critica positiva'),
+(50454422,'No hay movimiento al local 20 min'),
+(50458679,'Acumula devices'),
+(50452912,'Fraude kilometros de entrega'),
+(50452913,'Entrega en dirección equivocada'),
+(50465245,'Fake GPS'),
+(50450879,'Fake GPS 20 min'),
+(50441438,'Fake GPS 30 min'),
+(50443349,'NO GPS  20 min'),
+(50464767,'Salteo de pasos 20 min'),
+(50491081,'Inconvenientes con el vehículo'),
+(50455862,'No se contacta al cliente'),
+(50481382,'Entrega completa'),
+(50444916,'No GPS 30 min'),
+(50445572,'Pedido no llego 30 min'),
+(50492752,'Orden cancelada 20 min'),
+(50456438,'Orden cancelada 30 min');
+
+USE deliveryapp;
+
+explain conceptos;
+
+select * from conceptos;
+
+INSERT INTO conceptos
+(rule_id,concepto)
+values
+(819,'DELIVERY'),
+(820,'DELIVERY'),
+(821,'DELIVERY'),
+(823,'DELIVERY'),
+(825,'DELIVERY'),
+(824,'DELIVERY'),
+(826,'DELIVERY'),
+(827,'DELIVERY'),
+(828,'DELIVERY'),
+(829,'DELIVERY'),
+(839,'DELIVERY'),
+(849,'DELIVERY'),
+(859,'DELIVERY'),
+(843,'DELIVERY'),
+(844,'DELIVERY'),
+(845,'DELIVERY'),
+(846,'DELIVERY'),
+(847,'DELIVERY'),
+(1495,'EVALUATION'),
+(848,'DELIVERY'),
+(850,'DELIVERY'),
+(851,'DELIVERY'),
+(698,'BATCH'),
+(699,'BATCH'),
+(1046,'PER_DELIVERY'),
+(852,'DELIVERY'),
+(853,'DELIVERY'),
+(854,'DELIVERY'),
+(855,'DELIVERY'),
+(856,'DELIVERY');
+
+USE deliveryapp;
+
+explain verticales;
+
+select * from verticales;
+
+INSERT INTO verticales
+(Local_ID,vertical_id,vertical_name)
+values
+(184984,1,'Mercado'),
+(183903,2,'Restaurant'),
+(222554,3,'Farmacia'),
+(184949,4,'Cafeteria'),
+(146354,5,'Envios'),
+(185130,1,'Mercado'),
+(143960,2,'Restaurant'),
+(164551,3,'Farmacia'),
+(110301,4,'Cafeteria'),
+(182582,5,'Envios'),
+(226724,1,'Mercado'),
+(148395,2,'Restaurant'),
+(162858,3,'Farmacia'),
+(152824,4,'Cafeteria'),
+(221642,5,'Envios'),
+(225721,1,'Mercado'),
+(153692,2,'Restaurant'),
+(71905,3,'Farmacia'),
+(169885,4,'Cafeteria'),
+(134241,5,'Envios'),
+(139582,1,'Mercado'),
+(138642,2,'Restaurant'),
+(108183,3,'Farmacia'),
+(152621,4,'Cafeteria'),
+(142995,5,'Envios'),
+(139191,1,'Mercado'),
+(116366,2,'Restaurant'),
+(146952,3,'Farmacia'),
+(167803,4,'Cafeteria'),
+(138493,5,'Envios');
